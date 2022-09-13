@@ -1,0 +1,2073 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Shizuru&display=swap");
+
+/* لقد تم استعمال 2 من انواع الخطوط في صفحة واحدة */
+
+/* 
+الخاصية fontfamily عندما تريد اختيار اللغة لفقرة معينة
+الخاصية fontwieght لاختيار ستايل الخط عند وجود كذا ستايل لنوع الخط 
+*/
+
+body {
+  font-family: "Shizuru", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+/* background position تستطيع تحريكها اما كلمات دلالية او نسبة مئوية % او بارقام مثلا 20 15 */
+/* background repeat اختيار وضع الصورة تريد تكرارخ ام لا */
+/* background attachment خاصية انزال الصورة مع شريط السحب للاسفل او بقائعا في موضعها
+تبقى موضعها ( scroll)
+تتحرك مع scroll (fixed) */
+/* position : top center bottom */
+
+.num1 {
+  background-color: aquamarine;
+  background-image: url(../img/programing.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-attachment: fixed;
+  background-size: 25% 30%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* padiding هو الاطار الداخلي للعنصر  
+تبدا اتجاهاته من 
+top right bottom left */
+/* padding تقبل ارقام و نسبة مئوية */
+/* ---------------- */
+/* margin	(padding) هو الاطارالخارجي ل */
+/* margin تقبل ارقام و نسبة مئوية */
+/* ---------- */
+/* الفرق بين pading و margin 
+padding لا تقبل قيم سلبية يعني مثلا -1 
+margin تقبل قيم سلبية  */
+/* ----- */
+/* اظن ان width و margin left/right/../../ تحكم بديل عن ال marigan وحدها */
+/* او انه تخصيص اكثر لما سبق ذكره يعني تمكين اكثر للخاصية المتكلم عنها */
+
+.num2 {
+  background-image: url(../img/programing.jpg);
+  background-color: rgb(180, 177, 0);
+  padding: 30px 250px;
+  margin: 150px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: 20% 75%;
+}
+
+.num3 {
+  background-image: url(../img/programing.jpg);
+  background-color: rgb(43, 74, 121);
+  padding: 30px 250px;
+  margin: 20px;
+  background-repeat: no-repeat;
+  width: 30%;
+  margin-left: 17%;
+}
+
+/* عندما نكتب (width) و نريد الاستغناء عن ما يحلقها كما في مثال 4 نكتب فقط (ميرجين اوتو) */
+/* width نوسيط جانبي */
+/* ------ */
+/* border تقبل 4 قيم يعني 0 0 0 0 اي تقبل 4 قيم */
+/* border width يعني حجم البوردير */
+/* نستطيع كتابة ال border كله في سطر واحد
+نكتب
+border 10px brown solid */
+
+.num4 {
+  background-image: url();
+  background-color: rgb(192, 138, 192);
+  padding: 30px 250px;
+  background-repeat: no-repeat;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  border-width: 10px;
+  border-color: brown black yellowgreen goldenrod;
+  border-style: solid;
+}
+
+/* ------------------------------------- */
+/* 
+ .. block
+
+  --take full width if no width
+  --add line break
+  --respect padding margin width height
+
+ .. inline
+
+  --do not respect width height
+  --respect padding and magin [ just left and right ]
+  --do not add line break
+  --allow elments before and after it
+
+ .. inline-block
+
+  --respect padding margin width height
+  --allow elments before and after it
+  --
+*/
+
+/* -------------- */
+/* display الخاصية لها القدرة على تغيير قيمة العنصر من بلوك الى انلاين او انلاين الى بلوك */
+/* يعني مثلا ان كان العنصر انلاين و تريد تحويله الى بلوك تختار من ديسبلاي بلوك */
+
+.num5 {
+  background-color: grey;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  height: 30px;
+}
+.num6 {
+  background-color: grey;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  height: 30px;
+}
+.num7 {
+  background-color: grey;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  height: 30px;
+}
+
+/* ------------------------------- */
+/* الخواص
+display:none
+visibility:hidden
+يشترك بينهما اخفاء العنصر لكن
+الاولى تخفي العنصر و المكان
+الثانية تخفي العنصصر لكن يبقى المكان ظاهر */
+
+/* --------------------- */
+/*al group
+ الدرس 13
+لجمع العناصر مع بعض في الاوامر نكتب العناصر مع الفواصل ثم نفتح قوس الاوامر */
+
+/* ---------------------------- */
+/* nesting
+الدرس 14
+هو تخصيص عنصر في css عن طريق كتابةالترتيب للعناصر حتى نصل الى العنصر المطلوب من دون ان نستخدم الكلاس الخاصة به
+مثلا
+div nav ul */
+
+/* --------------- */
+/* width 
+الدرس 15
+width يعني العرض
+الخاصية التالية يعني على حجم العنصر
+width:fit-content;
+يعني على حجم العنصر بشكل تلقائي يعني نستغني مثلا عن كتابة ارقام 
+ */
+
+/* ------------------- */
+/*overflow
+ الدرس 16
+ هي النص الزائد الذي يخرج عن الابعاد المحددة 
+ يعني لما يكون النص حجمه اكبر من حجم المربع المراد عرضه
+ نختار overflow:auto;
+ لاخفائه hidden
+ اذا اردنا تقسيمه يمكن تقسيمه الى قسمين
+ قسم عامودي overflow-y
+ قسم افقي overflow-x
+ ننهاية نقول ان هذه الخاصية هي معالجة للسكرول ايضا حتى لا تضطر الى تمديد في الصفحة 
+  */
+
+.num8 {
+  background-color: grey;
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 6px;
+  overflow: auto;
+}
+
+/* ------------------------------ */
+/* 
+text color خصائص
+backgroud-color
+color
+text shadow
+syntax => h-shadow v-shadow blur color
+             اللون الضباب عامودي افقي   
+ */
+
+.num9 {
+  background-color: #cac4c4;
+  color: rebeccapurple;
+  text-shadow: 1px 2px 3px rgb(74, 4, 4);
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  height: 30px;
+}
+
+/* ------- */
+
+/* 
+text-align
+تغيير تموضع الكتابة في الصفحة
+*/
+
+/* 
+direcation
+تغيير تموضع الصفحة
+من اليمين الى الشمال  او من الشمال الى اليمين
+rtl من اليمين الى الشمال
+ltr من الشمال الى اليمين whis is basic
+*/
+
+/* الدرس 18 يحتاج مراجعة yellow */
+
+/* 
+text-decoration تزين الخط
+text-transform تحويل الخط
+يعني تحويل النصوص باستخدام معين لاحجام الاحرف
+*/
+
+.num10 {
+  background-color: #cac4c4;
+  text-align: center;
+  direction: rtl;
+  text-decoration: overline;
+  text-transform: capitalize;
+}
+
+/* بواسطة الخاصية تم ازالة الخط التلقائي الذي يظهر تحت اللينك text-decoration */
+
+.num10 span a {
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* 
+  text spacing
+-- letter spacing الفراغات بين الحروف
+-- indentaion تستخدم عادة لكتابة الكود بترتيب عامودي منسق للنص
+-- line height الارتفاع بين الخطوط
+-- word spacing + wraping + white spaec الفراغات بين الكلمات
+-- word-break يستخدم لتنزيل الكتابة التي تتجاوز الحد ويدث لتكون داخله ضمن اسطر
+
+*/
+
+.num11 {
+  background-color: rgba(124, 194, 175, 0.591);
+  letter-spacing: 5px;
+  text-indent: 100px;
+  line-height: 1.6;
+  word-spacing: 62px;
+  width: 300px;
+  word-break: break-all;
+  /* color: white;
+	padding: 5px 10px;
+	display: inline-block;
+	border-radius: 4px;
+	text-decoration: none; */
+}
+
+/*  الدرس 20 يحتاج مراجعة yellow */
+
+.num12 {
+  background-color: bisque;
+  padding: 10px;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.num13 {
+  text-align: center;
+  padding: 20px;
+  background-color: cornsilk;
+  border: 20px solid rgba(124, 194, 175, 0.591);
+  font-size: 30px;
+}
+
+.num13 p {
+  border: inherit;
+  padding: inherit;
+}
+
+/* ---------------- */
+/*  معطيات حجم الخطوط */
+/* 
+الحجم الطبيعي العادي هو px16 القيمة الافتراضية
+em =  ضعف القيمة الافتراضية السابقة للبودي يعني اذا اخترنا حجم الخط 20 فان 1 منها يساوي 20
+rem = ضعف القيمة السابقة الافتراضية فقط يعني 1 منها يساوي 16
+vw = view port width يعني عرض الصفحة الاساسي فكل 1 منها يعني 1 من 100 من عرض الصفحة يعني اذا عرض الصفحة 900 فهو اذا 9
+vw تكبر الصفحة تكبر معاها تصغر الصفحة تصغر معاها
+ */
+
+.num14 {
+  font-size: 30px;
+  font-family: "Shizuru", cursive;
+}
+
+.num14 span {
+  font-size: 2em;
+}
+
+.num14 span span {
+  font-size: 2.5rem;
+}
+
+.num15 {
+  font-size: 5vw;
+  font-weight: 600;
+}
+
+/* -------------- */
+
+/* mouse cursor  */
+/*  هذه الخاصية لاجراء تعديل على نوع اشارة السهم الذي يختار العنصر المحدد */
+
+.num16 button {
+  background: transparent;
+  border: none;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ------------------- */
+
+/* 
+float 
+clear
+*/
+
+/*  من اهم الخواص في تقسيم الصفحة و لهم ارتباط ببعض */
+
+.u1 {
+  background-color: red;
+  padding: 10px;
+}
+
+.u1 div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #eee;
+  width: 25%;
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+/*  -------------------- yellow */
+/*  ----------------------------------------  */
+/* calc */
+/*  هذه الخاصية تستعمل للاستغناء عن الحساب اليدوي ل width & margin left */
+/*  نكتب width: calc(88% / 5) */
+
+.u2 {
+  margin: 0px;
+}
+
+/*  هنا الحساب من نفس الخانة */
+
+.u2 div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: yellow;
+  float: left;
+  width: calc(88% / 5);
+  /* width: 17.6%; */
+  margin-left: 2%;
+}
+
+/* 
+content width is: 100%
+6 spaces 2% * 6 => 12% from content width
+88% avilable space
+5 elements the width is: 88/5
+*/
+
+/*  هنا الحساب من خانة مختلفة */
+
+.u21 {
+  margin: 10px;
+}
+.u21 div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: yellow;
+  float: left;
+  width: calc((100% - 90px) / 5);
+  margin-left: 15px;
+}
+
+/* 
+content width is: 100%
+6 spaces 15px * 6 => 90px from content width
+100% - 90px avilable space
+5 elements the width is: (100% - 90px)/5
+*/
+
+/* ---------------  */
+/*  الدرس 29 يحتاج اعادة yellow */
+
+/* ---------------  */
+/* الدرس 30 يحتاج جدا الى تركيز yellow white yellow  */
+/*     
+
+position
+
+-- static => default  الوضع الطبيعي لا يعمل شئ
+-- relative (top / bottom / right / left) هذه ان خصصتها لعنصر تستطيع التحكم به بعد ان تضيف عناصر التحكم به
+-- absolute تحريك عنصر داخل عنصر لكن غير متحرك الا لما تحركه انت
+-- fixed تحريك العنصر داخل الصفحة
+-- sticky تحريك العنصر داخل العنصر مثل سابقتها
+*/
+
+.u3 {
+  padding: 10px;
+  position: static;
+  top: 20px;
+}
+
+/*  شريط  المتحرك --------------------------------------- blue black blue */
+.u3 div {
+  position: sticky;
+  bottom: 281px;
+  background-color: NONE;
+  color: royalblue;
+  font-weight: bold;
+  padding: 22px;
+  margin: -15px;
+  background-image: url(../img/programing.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: ; */
+  background-size: 16% 72%;
+  width: 80%;
+  z-index: 3;
+}
+
+/*  -----------------   */
+/* z-index */
+/* الدرس 31 يحتاج اعادة yellow */
+
+.u4 {
+  padding: 10px;
+  width: 100px;
+  color: #fff;
+  text-align: center;
+  margin: 8px;
+}
+
+.one {
+  background-color: red;
+  position: absolute;
+  width: 100px;
+  right: 0;
+  bottom: 0;
+}
+
+.two {
+  background-color: green;
+}
+
+.three {
+  background-color: blue;
+  width: 500px;
+  height: 300px;
+  position: relative;
+}
+
+/* ------------------  */
+/*  red yellow */
+
+/*  شريط on المتحرك --------------------------------------- blue black blue */
+.on {
+  background-color: red;
+  position: fixed;
+  left: -193px;
+  bottom: -193px;
+  margin: 194px;
+  padding: 10px;
+  color: #eee;
+}
+
+/*  ----------------  */
+/*  الدرس 33  */
+/* table */
+/* الجداول لم يتم مذاكرته */
+
+/*  -------------  */
+/* ------------------------------- hover red yellow red */
+/* Pseudo Classes */
+/*  hover */
+
+.s1 a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: aqua;
+  font-size: 30px;
+}
+
+hr {
+  border: 2px solid greenyellow;
+}
+
+/* ------------------   */
+
+.q1 span {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 60;
+  font-weight: bold;
+}
+
+.q2::first-letter {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 60;
+  font-weight: bold;
+}
+
+.q3::first-line {
+  font-weight: bolder;
+  color: green;
+}
+
+.q4::selection {
+  background-color: black;
+  color: bisque;
+}
+
+.s301 {
+  margin: 8px;
+  display: block;
+}
+
+.s3 {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.s312 {
+  background-color: #eee;
+  padding: 10px;
+  width: 600px;
+  float: left;
+  position: relative;
+}
+
+.s312::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  right: -10px;
+  top: 0;
+  background-color: #009688;
+}
+
+.s312::before {
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: white;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #009688 transparent transparent;
+}
+.s31 {
+  background-color: #eee;
+  width: 50px;
+  margin-right: 20px;
+  padding: 10px;
+  height: 98.5px;
+  float: left;
+  font-size: 50px;
+  text-align: center;
+}
+
+/*  ------------------  */
+/* box-shadow  */
+
+.w1 {
+  padding: 20px;
+  width: 300px;
+  background-color: #eee;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: rgb(202 196 196) -1px 1px 10px 4px;
+}
+
+/* ------------------  */
+/* the box model */
+/*  box sizing */
+
+.w2 {
+  width: 600px;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ddd;
+}
+
+/* * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+} */
+
+.one1 {
+  background-color: #eee;
+  width: 300px;
+  float: left;
+  padding: 10px;
+  border: 10px solid red;
+  box-sizing: border-box;
+}
+
+/* ---------------  */
+
+.w3 {
+  background-color: #eee;
+  width: 200px;
+  height: 100px;
+  transition-duration: 5s;
+  transition-delay: 2s;
+  box-sizing: border-box;
+}
+
+.w3:hover {
+  margin-left: 20px;
+}
+
+/* -------------------------  */
+/*  important */
+/*  تستعمل هذه الخاصية لالغاء مفعول الستايل ب html لان الستيل داخه يبغى على الستايل في صفحة تعديل السمات */
+.w4 {
+  background-color: #eee !important;
+}
+
+/* ------------------------------------  */
+/*  45 */
+
+/*  هذه طريقة المحترفين في التعمال بالالوان للنصوص وو غيره */
+/*  تستطيع استخدامها في padding و غيرها */
+:root {
+  --maincolor: blue;
+}
+
+.c45 {
+  color: var(--maincolor);
+}
+.c45 button {
+  color: var(--maincolor);
+  background-color: #009688;
+}
+
+/* 46 */
+/*  flexible box */
+
+/* 
+for parent
+--display: flex => to start flexible box
+--flex-direction: row => default value
+or row-reverse لعكس من الاخر الى الاول
+or column لالغاء العرض الافقي و جعله عامودي
+--flex-wrap: nowrap => defaul value
+wrap لجعل ما يضاف لاحقا بسطر اخر
+--flex-flow: flex direction + flex wrap
+-----
+--justify-content: flex-start => default value
+--align-items: stretch => default value
+--align-content: stretch => default value
+
+for child
+--flex-grow: 0=> default value
+--flex-shrink: 1 => default value
+--order: 0 => default value
+--flex-basis: auto => default value
+--flex: [flex grow] [flex shrink] [flex basis] 0 1 auto
+--align-self: auto => default value 
+*/
+
+/*  
+parent الاباء يعني تكتب في المربع الذي يشمل العناصر
+child الابناء يعني تكتب في العناصر ضمن المربع
+*/
+
+/*  justify content */
+/* معناها توزيع العناصر */
+/* align items   */
+/*  محاذاة العناصر */
+
+.flex {
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-between;
+  /* flex-direction: row-reverse;
+	flex-wrap: nowrap; */
+}
+
+.flex div {
+  background-color: #f00;
+  color: white;
+  width: calc(90 / 5);
+  text-align: center;
+  padding: 20px;
+}
+
+.float {
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.float div {
+  background-color: #f00;
+  color: white;
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ----- */
+/*  justify content */
+/*   توزيع العنصاصر افقيا */
+/* align items */
+/*  توزيع العنصاصر عموديا */
+
+.center {
+  background-color: blue;
+  color: white;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15%;
+  margin-left: 500px;
+}
+
+/*  ----------  */
+
+.flex01 {
+  background-color: #eee;
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  /* align-items: center; */
+  align-content: space-evenly;
+  justify-content: space-around;
+
+  /* flex-direction: row-reverse;
+	flex-wrap: nowrap; */
+}
+
+.flex01 div {
+  background-color: #f00;
+  color: white;
+  width: 25%;
+  height: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.flex02 {
+  background-color: #eee;
+  width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  align-content: center;
+  /* justify-content: space-between; */
+}
+
+/* margin right نابت عن justify content */
+
+/*  flex grow and shrink تم تطبيقهم في على العنصر مباشرة */
+/*  نستطيع ان نرى تاثير الخاصية عندما نلعب بال width الاساسي parent */
+
+.flex02 div {
+  background-color: #f00;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+  flex-grow: 0;
+}
+
+/* ----------------------  */
+
+.flex03 {
+  background-color: #eee;
+  width: 800px;
+  height: 300px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  align-content: center;
+}
+
+.flex03 div {
+  background-color: #f00;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 5px;
+}
+
+/*  ------------------------  */
+/*  54  */
+/*  filter  */
+
+.filter {
+  margin: auto;
+  background-color: #eee;
+  width: 95%;
+  height: 780px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  /*  ----  */
+}
+
+.img1 {
+  width: 244px;
+  height: 214px;
+  padding: 23px;
+  margin-left: 5px;
+  /*  --  */
+
+  transition: 0.3s;
+  filter: grayscale(100%);
+}
+
+.img1:hover {
+  filter: grayscale(0);
+}
+
+.img2 {
+  width: 244px;
+  height: 214px;
+  padding: 23px;
+  margin-left: 5px;
+  /*  --  */
+
+  transition: 0.3s;
+  filter: blur(4px);
+}
+
+.img2:hover {
+  filter: blur(0);
+}
+
+.img3 {
+  width: 244px;
+  height: 214px;
+  padding: 23px;
+  margin-left: 5px;
+  /*  --  */
+
+  transition: 0.3s;
+  filter: invert(100%);
+}
+
+.img3:hover {
+  filter: invert(0);
+}
+
+/*  ---------------  */
+/*  55  */
+
+.color {
+  margin: auto;
+  width: 95%;
+  height: 600px;
+  background-color: pink;
+  padding: 20px;
+  display: flex;
+}
+
+.color01 {
+  width: 40%;
+  height: 550px;
+  background-image: linear-gradient(
+    180deg,
+    rgb(180, 189, 57),
+    rgb(49, 162, 177),
+    rgb(201, 143, 37),
+    rgb(30, 139, 75)
+  );
+  padding: 10px;
+  margin: 20px;
+  color: #fff;
+}
+
+.color02 {
+  width: 40%;
+  height: 550px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(180, 189, 57) 25%,
+    rgb(49, 162, 177) 25%,
+    rgb(49, 162, 177) 50%,
+    rgb(201, 143, 37) 50%,
+    rgb(201, 143, 37) 75%,
+    rgb(30, 139, 75) 75%
+  );
+  padding: 10px;
+  margin: 20px;
+  color: #fff;
+}
+
+/*  -------------------  */
+/*  56  */
+/* 1/2 2/2 */
+
+.c56 p {
+  caret-color: red;
+  text-align: center;
+}
+
+.c56 a {
+  margin-left: 500px;
+  pointer-events: none;
+}
+
+/*  -----------  */
+/*  57  */
+/*  display grid */
+
+/* 
+grid
+for parent
+--display: grid | inline-grid
+--grid-template-columns => [number of columns in] => [px , % , auto , fraction , repeat() , mix]
+--grid-template-rows => [number of rows height in] => [px , % , auto , fraction , repeat() , mix]
+--gap: [row gap] [column gap]
+--justify-content
+--align-content
+--grid-template-areas
+for child
+--grid-column: [grid column staer] [grid column end]
+--grid-row: [grid row start] [grid row end]
+--grid-area: [grid row start] [grid column start] [grid row end] [grid column end] 
+*/
+
+.parent57 {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: rgb(172, 158, 158);
+  display: grid;
+  grid-template-columns: 100px auto repeat(2, auto) 1fr;
+  grid-template-rows: 100px auto 1fr;
+  /* row-gap: 10px;
+	column-gap: 40px; */
+  gap: 10px 40px;
+}
+
+.parent57 div {
+  background-color: #f00;
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*  -------------  */
+
+.parent59 {
+  margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  background-color: rgb(172, 158, 158);
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px 40px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.parent59 div {
+  background-color: #f00;
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*  -----------  */
+
+.page01 {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.page ul {
+  list-style: none;
+}
+
+.page ul li {
+  display: inline-block;
+}
+
+.page {
+  height: 100vh;
+  display: grid;
+  background-color: #eee;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas:
+    "logo logo nav nav nav nav nav nav nav nav" "cont cont cont cont cont cont cont . side side"
+    "foot foot foot foot foot foot foot foot foot foot";
+}
+
+.page h2 {
+  grid-area: logo;
+  background-color: #f00;
+  color: #fff;
+}
+
+.page01 div nav {
+  grid-area: nav;
+  background-color: blue;
+  color: #fff;
+}
+
+.page01 div section {
+  grid-area: cont;
+  background-color: yellow;
+  color: black;
+}
+
+.page01 div aside {
+  grid-area: side;
+  background-color: green;
+  color: #fff;
+}
+
+.page01 div footer {
+  grid-area: foot;
+  background-color: black;
+  color: #fff;
+}
+
+/*  61 */
+
+.parent61 {
+  margin: 20px auto;
+  width: 950px;
+  height: 1050px;
+  background-color: #cac4c4;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 10px 10px;
+}
+
+.parent61 div {
+  background-color: #f00;
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*  -----------  */
+/*  62  */
+
+.parent62 {
+  margin: 20px auto;
+  background-color: #cac4c4;
+  width: 1400;
+  height: 500;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.par62 {
+  width: 650px;
+  height: 500px;
+  background-color: #cac4c4;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px 5px;
+}
+
+.par62 div {
+  background-color: #f00;
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.par621 {
+  width: 650px;
+  height: 500px;
+  background-color: #cac4c4;
+  display: grid;
+  grid-template-areas: " head head head head head" "nav nav cont cont cont";
+  gap: 5px 5px;
+}
+
+.par621 div {
+  background-color: #f00;
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*     63     */
+/*  يحتاج اعادة */
+.par63 {
+  margin: 20px auto;
+  height: 500px;
+  background-color: #cac4c4;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.par63 div {
+  background-color: #f00;
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*  65  */
+/*  ---------------  */
+
+/*
+  لكل خاصية اتجاهين
+  x افقي
+  y عامودي
+
+*/
+
+/*  1 yellow */
+.ani {
+  display: flex;
+}
+
+.ani1 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ani1:hover {
+  /* transform: scalex(1.1); */
+  transform: scalex(2);
+  transition: 0.3s;
+}
+
+.ani2 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ani2:hover {
+  transform: scaley(2);
+  transition: 0.3s;
+}
+
+.ani3 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ani3:hover {
+  /* transform: scalex(1.1); */
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/*  -------------------   */
+/*  2 yellow */
+
+.an {
+  display: flex;
+}
+.an1 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.an1:hover {
+  transform: rotatex(15deg);
+  transition: 0.3s;
+}
+.an2 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.an2:hover {
+  transform: rotatey(80deg);
+  transition: 0.3s;
+}
+.an3 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.an3:hover {
+  /* transform: scale(-1) rotate(.7turn); */
+  /* transform: scale(-1) rotate(0deg); */
+  transform: rotate(90deg);
+  transition: 0.7s;
+}
+
+/*  -------------  */
+/*  3 yellow */
+
+.anm {
+  display: flex;
+}
+.anm1 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.anm1:hover {
+  /* transform: translate(-100px); */
+  transform: translatex(100px);
+  transition: 0.3s;
+}
+.anm2 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.anm2:hover {
+  transform: translatey(100px);
+  transition: 0.3s;
+}
+.anm3 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.anm3:hover {
+  transform: translate(-100px, -100px);
+  transition: 0.7s;
+}
+
+/*  -------------  */
+/*  4 yellow */
+
+.anmi {
+  display: flex;
+}
+.anmi1 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.anmi1:hover {
+  /* transform: translate(-100px); */
+  transform: skewX(20deg);
+  transition: 0.3s;
+}
+.anmi2 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.anmi2:hover {
+  transform: skewY(20deg);
+  transition: 0.3s;
+}
+.anmi3 {
+  width: 80px;
+  height: 80px;
+  padding: 50px;
+  margin: 10%;
+  border: 5px black solid;
+  background-color: pink;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.anmi3:hover {
+  transform: skew(20deg, 20deg);
+  transition: 0.7s;
+}
+
+/*  -------------  */
+/*  70  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.sh {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.shape {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: #eee;
+}
+
+.shape .x-axis:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: -20px;
+  position: absolute;
+}
+
+.shape .x-axis:after {
+  content: "X-axis";
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  width: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.shape .y-axis:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  bottom: 0px;
+  left: -16px;
+  position: absolute;
+}
+
+.shape .y-axis:after {
+  content: "Y-axis";
+  position: absolute;
+  bottom: 93px;
+  left: -9%;
+  transform: translatey(-50%);
+  background-color: #fff;
+  width: 25px;
+  text-align: center;
+  font-weight: bold;
+  writing-mode: vertical-lr;
+}
+
+.shape .origin {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #f00;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shape div {
+  width: 90%;
+  height: 90%;
+  background-color: palevioletred;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 5%;
+  transition: 1.1s;
+  /* position: relative; */
+}
+
+.shape div:hover {
+  transform-origin: 0% 100%;
+  transform: rotate(180deg);
+  /* transform: scale(1.1); */
+}
+
+/*  red red red red blue blue blue  */
+
+/* 3d transform */
+
+.tr3d {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.tr3d01 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: #eee;
+}
+
+.tr3d01 .x-axis:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: -20px;
+  position: absolute;
+}
+
+.tr3d01 .x-axis:after {
+  content: "X-axis";
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  width: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tr3d01 .y-axis:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  bottom: 0px;
+  left: -16px;
+  position: absolute;
+}
+
+.tr3d01 .y-axis:after {
+  content: "Y-axis";
+  position: absolute;
+  bottom: 93px;
+  left: -9%;
+  transform: translatey(-50%);
+  background-color: #fff;
+  width: 25px;
+  text-align: center;
+  font-weight: bold;
+  writing-mode: vertical-lr;
+}
+.tr3d01 .z-axis:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  bottom: -256px;
+  left: -147px;
+  position: absolute;
+  transform: rotate(55deg);
+}
+
+.tr3d01 .z-axis:after {
+  content: "Z-axis";
+  position: absolute;
+  bottom: -115px;
+  left: -56%;
+  transform: translatey(-50%);
+  background-color: #fff;
+  width: 53px;
+  text-align: center;
+  font-weight: bold;
+
+  transform: rotate(-36deg);
+}
+
+/* .tr3d01 .origin {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #f00;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+} */
+
+.tr3d01 div {
+  width: 90%;
+  height: 90%;
+  background-color: grey;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 5%;
+  transition: 1.1s;
+}
+
+.tr3d01 div:hover {
+  /* transform: rotate3d(0, 5, 2, 60deg); */
+  transform: rotatex(90deg);
+  transform-origin: right bottom;
+}
+
+/*     3d move 2   */
+
+.tr3d2 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.tr3d02 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: #eee;
+  perspective: 300px;
+  perspective-origin: bottom left;
+}
+
+.tr3d02 .x-axis:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: -20px;
+  position: absolute;
+}
+
+.tr3d02 .x-axis:after {
+  content: "X-axis";
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  width: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tr3d02 .y-axis:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  bottom: 0px;
+  left: -16px;
+  position: absolute;
+}
+
+.tr3d02 .y-axis:after {
+  content: "Y-axis";
+  position: absolute;
+  bottom: 93px;
+  left: -9%;
+  transform: translatey(-50%);
+  background-color: #fff;
+  width: 25px;
+  text-align: center;
+  font-weight: bold;
+  writing-mode: vertical-lr;
+}
+.tr3d02 .z-axis:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  bottom: -256px;
+  left: -147px;
+  position: absolute;
+  transform: rotate(55deg);
+}
+
+.tr3d02 .z-axis:after {
+  content: "Z-axis";
+  position: absolute;
+  bottom: -115px;
+  left: -56%;
+  background-color: #fff;
+  width: 53px;
+  text-align: center;
+  font-weight: bold;
+  transform: rotate(-36deg);
+}
+
+.tr3d02 div {
+  width: 90%;
+  height: 90%;
+  background-color: grey;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 5%;
+  transition: 1.1s;
+}
+
+.tr3d02 div:hover {
+  transform: translatez(150px);
+}
+
+/*  ------  */
+
+.usu {
+  margin: 40px auto;
+  width: 200px;
+}
+
+.ubox {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+
+.ubox:hover {
+  transform: rotateY(-180deg);
+}
+
+.ubox .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  backface-visibility: hidden;
+}
+
+.ubox .front {
+  background-color: red;
+}
+
+.ubox .back {
+  background-color: green;
+  transform: rotatey(180deg);
+}
+
+/*  --  */
+
+.usu2 {
+  margin: 40px auto;
+  width: 200px;
+  perspective: 200px;
+}
+
+.ubox2 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.ubox2:hover {
+  transform: rotateY(-180deg);
+}
+
+.ubox2 .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  backface-visibility: hidden;
+}
+
+.ubox2 .front {
+  background-color: red;
+}
+
+.ubox2 .back {
+  background-color: green;
+  transform: rotatey(180deg);
+}
+
+/* ---  */
+
+.usu3 {
+  margin: 40px auto;
+  width: 200px;
+  perspective: 600px;
+}
+
+.ubox3 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: right center;
+}
+
+.ubox3:hover {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.ubox3 .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  backface-visibility: hidden;
+}
+
+.ubox3 .front {
+  background-color: red;
+}
+
+.ubox3 .back {
+  background-color: green;
+  transform: rotatey(180deg);
+}
+
+/*  red red red red blue blue blue  */
+
+/*  animation */
+
+.mation {
+  width: 100%;
+  height: 25vh;
+  position: relative;
+}
+.mation div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transform: translate(-50%, -50%);
+  animation-name: chang-color;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+/* @keyframes chang-color {
+	from {
+		background-color: red;
+	}
+	to {
+		background-color: blue;
+	}
+} */
+
+@keyframes chang-color {
+  0% {
+    background-color: red;
+  }
+  10% {
+    background-color: aliceblue;
+  }
+  20% {
+    background-color: blueviolet;
+  }
+  30% {
+    background-color: brown;
+  }
+  40% {
+    background-color: aqua;
+  }
+  50% {
+    background-color: green;
+  }
+  60% {
+    background-color: yellow;
+  }
+  70% {
+    background-color: black;
+  }
+  80% {
+    background-color: orange;
+  }
+  90% {
+    background-color: pink;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+/*  -----  */
+
+.mation01 {
+  width: 100%;
+  height: 25vh;
+  position: relative;
+}
+
+.mation01 div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  border-radius: 50%;
+  border: 5px solid yellow;
+  border-left-color: transparent;
+  animation-name: span;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes span {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*  --------  */
+
+.load {
+  width: 100%;
+  height: 25vh;
+
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+.load div {
+  width: 20px;
+  height: 20px;
+  background-color: orchid;
+  border-radius: 50%;
+  margin: 0 5px;
+
+  animation-name: up-and-down;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+  /* animation-timing-function: ease; */
+  animation-direction: alternate;
+}
+
+.load .oo2 {
+  animation-delay: 0.3s;
+}
+.load .oo3 {
+  animation-delay: 0.6s;
+}
+
+/* @keyframes up-and-down {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0.2;
+	}
+} */
+
+@keyframes up-and-down {
+  to {
+    opacity: 0.2;
+    transform: translateY(-20px);
+  }
+}
